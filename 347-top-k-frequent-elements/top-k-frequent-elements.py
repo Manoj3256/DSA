@@ -5,9 +5,6 @@ class Solution(object):
         :type k: int
         :rtype: List[int]
         """
-        if len(nums) == k:
-            return nums
-        
         freq = {}
         for num in nums:
             if num in freq:
