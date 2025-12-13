@@ -4,7 +4,6 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        s=min(nums)
         l=max(nums)
         for i in range(l+1):
             if i not in nums:
