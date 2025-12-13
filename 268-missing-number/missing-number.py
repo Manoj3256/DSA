@@ -6,7 +6,7 @@ class Solution(object):
         """
         s=min(nums)
         l=max(nums)
-        for i in range(s,l+1):
+        for i in range(l+1):
             if i not in nums:
                 return i
-        return l+1 if s==0 else 0
+        return l+1
