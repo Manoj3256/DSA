@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: int
         """
         bit=0
-        for i in range(len(nums)):
-            bit^=nums[i]
+        for i in nums:
+            bit^=i
         
         return bit
