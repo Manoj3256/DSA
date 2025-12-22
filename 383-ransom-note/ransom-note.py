@@ -7,7 +7,7 @@ class Solution(object):
         """
         if len(ransomNote)>len(magazine):
             return False
-        ran, maga={},{}
+        maga={}
         for i in  magazine:
             if i in maga:
                 maga[i]+=1
