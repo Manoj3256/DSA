@@ -5,6 +5,8 @@ class Solution(object):
         :type magazine: str
         :rtype: bool
         """
+        if len(ransomNote)>len(magazine):
+            return False
         ran, maga={},{}
         for i in  magazine:
             if i in maga:
