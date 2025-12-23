@@ -5,7 +5,7 @@ class Solution(object):
         :type p: str
         :rtype: List[int]
         """
-        right,index,seen=0,[],[]
+        index=[]
         dic={}
         for i in p:
             if i in dic:
