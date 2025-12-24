@@ -12,9 +12,7 @@ class Solution(object):
                 if nums2[i]<nums2[count]:
                     dic[nums2[i]]=nums2[count]
                     break
-                
                 count+=1
-        print(dic)
         for i in nums1:
             if i in dic:
                 t=dic[i]
