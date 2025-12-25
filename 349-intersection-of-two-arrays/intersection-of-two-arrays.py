@@ -5,13 +5,11 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: List[int]
         """
-        dic,res={},[]
-        for i in nums2:
-            if i not in dic:
-                dic[i]=1
-                
-        for i in nums1:
-            if i in dic:
-                dic.pop(i) 
-                res.append(i)
+        listed=set(nums2)
+        res=[]
+        for i in range(len(nums1)):
+            if nums1[i] in listed:
+                listed.remove(nums1[i]) 
+                res.append(nums1[i])
+
         return res
