@@ -7,10 +7,9 @@ class Solution(object):
         """
         dic,res={},[]
         for i in nums2:
-            if i in dic:
-                dic[i]+=1
-            else:
+            if i not in dic:
                 dic[i]=1
+                
         for i in nums1:
             if i in dic:
                 dic.pop(i) 
