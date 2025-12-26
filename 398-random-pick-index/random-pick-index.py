@@ -10,18 +10,15 @@ class Solution(object):
                 self.dic[nums[i]].append(i)
             else:
                 self.dic[nums[i]]=[i]
-        
-        print(self.dic)
     def pick(self, target):
         """
         :type target: int
         :rtype: int
         """
         import random as r
-        if target in self.dic:
-            l=len(self.dic[target])
-            j=r.randint(0,l-1)
-            return self.dic[target][j]
+        l=len(self.dic[target])
+        j=r.randint(0,l-1)
+        return self.dic[target][j]
         
 
 
