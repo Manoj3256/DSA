@@ -9,9 +9,10 @@ class Solution(object):
         right=len(numbers)-1
         
         while True:
-            if ( numbers[left]+numbers[right])==target:
+            t=numbers[left]+numbers[right]
+            if t==target:
                 return [left+1,right+1]
-            elif (numbers[left]+numbers[right])<=target:
+            elif t<=target:
                 left+=1
-            elif (numbers[left]+numbers[right])>=target:
+            elif t>=target:
                 right-=1
