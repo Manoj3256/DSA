@@ -6,10 +6,12 @@ class Solution(object):
         """
         seen = set()
         maxlen= left = 0
-        for right in range(len(s)):
-            while s[right] in seen:
-                seen.remove(s[left])
+        for i in range(len(s)):
+            while s[i] in seen:
+                seen.remove(s[left] )
                 left += 1
-            seen.add(s[right])
-            maxlen=max(maxlen, right - left + 1)
+
+            seen.add(s[i])
+            maxlen=max(maxlen, i - left + 1)
+        
         return maxlen
