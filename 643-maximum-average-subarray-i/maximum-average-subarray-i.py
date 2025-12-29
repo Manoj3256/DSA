@@ -5,12 +5,12 @@ class Solution(object):
         :type k: int
         :rtype: float
         """
-        left=wsum=0
-        result=-5000
-        for i in range(len(nums)):
+        left=0
+        wsum=sum(nums[0:k])
+        result=float(wsum)/k
+        for i in range(k,len(nums)):
             wsum+=nums[i]
-            if i-left+1>= k:
-                result=max(result,float(wsum)/k)
-                wsum-=nums[left]
-                left+=1
+            wsum-=nums[left]
+            left+=1
+            result=max(result,float(wsum)/k)
         return result
