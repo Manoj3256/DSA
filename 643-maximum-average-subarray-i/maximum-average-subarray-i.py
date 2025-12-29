@@ -5,8 +5,6 @@ class Solution(object):
         :type k: int
         :rtype: float
         """
-        if 1==len(nums):
-            return float(nums[0])
         left=wsum=0
         result=float('-inf')
         for i in range(len(nums)):
