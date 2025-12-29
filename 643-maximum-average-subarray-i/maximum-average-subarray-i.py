@@ -6,7 +6,7 @@ class Solution(object):
         :rtype: float
         """
         left=wsum=0
-        result=float('-inf')
+        result=-5000
         for i in range(len(nums)):
             wsum+=nums[i]
             if i-left+1>= k:
