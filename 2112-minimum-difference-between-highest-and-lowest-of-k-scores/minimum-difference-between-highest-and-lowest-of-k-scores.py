@@ -6,17 +6,15 @@ class Solution(object):
         :rtype: int
         """
 
-        if len(nums)<k:
-            print("less length")
+        if len(nums)<k or k==1:
             return 0
         result=float('inf')
         left=0
-        num=sorted(nums)
-        print(num)
-        while left+k-1<len(num):
-            if num[left+k-1]-num[left]<result:
-                result=num[left+k-1]-num[left]
+        nums.sort()
+        while left+k-1<len(nums):
+            if nums[left+k-1]-nums[left]<result:
+                result=nums[left+k-1]-nums[left]
             
-            print(num[left+k-1],num[left],num[left+k-1]-num[left])
+            print(nums[left+k-1],nums[left],nums[left+k-1]-nums[left])
             left+=1
         return result
