@@ -11,7 +11,7 @@ class Solution(object):
         result=float('inf')
         left=0
         nums.sort()
-        while left+k-1<len(nums):
+        while left<len(nums)-k+1:
             result=min(nums[left+k-1]-nums[left],result)
             left+=1
         return result
