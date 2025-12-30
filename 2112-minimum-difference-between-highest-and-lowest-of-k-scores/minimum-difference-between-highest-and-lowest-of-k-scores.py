@@ -12,9 +12,6 @@ class Solution(object):
         left=0
         nums.sort()
         while left+k-1<len(nums):
-            if nums[left+k-1]-nums[left]<result:
-                result=nums[left+k-1]-nums[left]
-            
-            print(nums[left+k-1],nums[left],nums[left+k-1]-nums[left])
+            result=min(nums[left+k-1]-nums[left],result)
             left+=1
         return result
