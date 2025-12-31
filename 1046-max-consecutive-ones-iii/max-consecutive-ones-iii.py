@@ -13,5 +13,6 @@ class Solution(object):
                 if nums[left]==0:
                     zeros-=1
                 left+=1
+                
             result=max(result,i-left+1)
         return result
