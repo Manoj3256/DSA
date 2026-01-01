@@ -6,7 +6,7 @@ class Solution(object):
         :rtype: int
         """
         def rec(lis,k,s,result):
-            if lis==[]:
+            if not lis:
                 return result
             curr,chance,left=lis[0],k,0
             for right in range(len(s)):
