@@ -8,9 +8,10 @@ class Solution(object):
         def rec(lis,k,s,result):
             if not lis:
                 return result
-            curr,chance,left=lis[0],k,0
+            curr,chance,left=next(iter(lis)), k,0
             for right in range(len(s)):
                 if curr!=s[right]:
+                    
                     chance-=1
                 while chance < 0:
                     if s[left] != curr:
@@ -18,6 +19,7 @@ class Solution(object):
                     left += 1
 
                 result=max(result,right-left+1)
-            return rec(lis[1:],k,s,result)
-        lis=list(set(s))
+            lis.remove(curr)
+            return rec(lis,k,s,result)
+        lis=set(s)
         return rec(lis,k,s,0)
