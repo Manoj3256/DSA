@@ -10,7 +10,7 @@ class Solution(object):
             if nums[right] in insidewin:
                 return True
             insidewin.add(nums[right])
-            if right-left >=k:
+            if right-left ==k:
                 insidewin.remove(nums[left])
                 left+=1
         return False
