@@ -5,12 +5,10 @@ class Solution(object):
         :type k: int
         :rtype: bool
         """
-        left,insidewin=0,set()
-        for right in range(len(nums)):
-            if nums[right] in insidewin:
+        dic={}
+        for i,n in enumerate(nums):
+            if n in dic and i-dic[n]<=k:
                 return True
-            insidewin.add(nums[right])
-            if right-left ==k:
-                insidewin.remove(nums[left])
-                left+=1
+            dic[n]=i
+            
         return False
