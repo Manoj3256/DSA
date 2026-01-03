@@ -12,8 +12,6 @@ class Solution(object):
                 dic[fruits[left]]-=1
                 if dic[fruits[left]]==0:
                     del dic[fruits[left]]
-                    print(fruits[left] in dic)
                 left+=1
             result=max(result,i-left+1)
-
         return result
