@@ -4,8 +4,6 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        if not float(len(s)/2):
-            return False
         stack=[]*len(s)
         for i in range(len(s)):
             if s[i]!=")" and s[i]!="}" and s[i]!="]":
