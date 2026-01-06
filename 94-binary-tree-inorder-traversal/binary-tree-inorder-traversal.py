@@ -11,7 +11,7 @@ class Solution(object):
         :rtype: List[int]
         """
         def inorder(root,res):
-            if root is None:
+            if not root:
                 return []
             inorder(root.left,res)
             res.append(root.val)
