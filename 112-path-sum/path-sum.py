@@ -11,10 +11,8 @@ class Solution(object):
         :type targetSum: int
         :rtype: bool
         """
-        def pathsum(root,target,curr):
-            if not root:
-                return False
-            if not root.left and not root.right and curr+root.val==target:
-                return True
-            return pathsum(root.left,target,curr+root.val) or pathsum(root.right,target,curr+root.val)
-        return pathsum(root,targetSum,0)
+        if not root:
+            return False
+        if not root.left and not root.right and root.val==targetSum:
+            return True
+        return self.hasPathSum(root.left,targetSum-root.val) or self.hasPathSum(root.right,targetSum-root.val)
