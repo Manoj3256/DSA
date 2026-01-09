@@ -11,7 +11,6 @@ class Solution(object):
         :type targetSum: int
         :rtype: bool
         """
-        curr=0
         def pathsum(root,target,curr):
             if not root:
                 return False
