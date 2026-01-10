@@ -13,7 +13,7 @@ class Solution(object):
         def dfs(root,low,high):
             if not root:
                 return True
-            if not (low<root.val<high):
+            if not(low<root.val<high):
                 return False
             return dfs(root.left,low,root.val) and dfs(root.right,root.val,high)
         return dfs(root,float('-inf'),float('inf'))
