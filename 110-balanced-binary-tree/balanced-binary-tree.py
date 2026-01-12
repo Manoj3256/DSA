@@ -20,7 +20,6 @@ class Solution(object):
             if right == -1:
                 return -1
             if 1<abs(left-right):
-                print("False graph")
                 return -1
             return 1+max(left, right)
         return depth_check(root)!=-1
