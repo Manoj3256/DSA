@@ -12,7 +12,6 @@ class Solution(object):
             g[u].append(v)
             g[v].append(u)
         visited=[False]*n
-        
         def dfs(root):
             if root==destination:
                 return True
@@ -22,5 +21,4 @@ class Solution(object):
                     if dfs(i):
                         return True
             return False
-        
         return dfs(source)
