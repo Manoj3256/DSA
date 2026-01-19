@@ -10,7 +10,7 @@ class Solution(object):
         result=0
         for i in range(n):
             if i not in visited:
-                q = deque([i])
+                q=deque([i])
                 visited.add(i)
                 while q:
                     item=q.popleft()
