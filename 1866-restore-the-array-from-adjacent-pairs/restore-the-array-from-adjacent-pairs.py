@@ -12,7 +12,7 @@ class Solution(object):
             graph[i].append(j)
             graph[j].append(i)
         for node in graph:
-            if len(graph[node] )==1:
+            if len(graph[node])==1:
                 starting=node
                 break
         def dfs(node):
