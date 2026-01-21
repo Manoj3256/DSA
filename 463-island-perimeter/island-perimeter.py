@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: int
         """
         col,row=len(grid[0]),len(grid)
-        p=0
         visited=set()
         def dfs(r,c):
             if r>row-1 or c>col-1 or c<0 or r<0 or grid[r][c]==0:
