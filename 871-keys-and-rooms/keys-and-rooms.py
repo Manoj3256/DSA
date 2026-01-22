@@ -6,7 +6,6 @@ class Solution(object):
         """
         keys=[False]*len(rooms)
         def dfs(rooms,visited,i):
-            print(visited,i)
             visited[i]=True
             for j in rooms[i]:
                 if not visited[j]:
