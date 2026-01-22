@@ -15,19 +15,3 @@ class Solution(object):
             return False
         else:
             return True
-
-
-
-
-
-
-
-
-
-        # for i in range(1,len(rooms)):
-        #     print("keys",keys)
-        #     if i in keys:
-        #         keys.extend(rooms[i])
-        #     else:
-        #         return False
-        # return True
