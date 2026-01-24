@@ -18,9 +18,8 @@ class Solution(object):
         while q:
             value=q.pop()
             visited+=1
-            for i,j in prerequisites:
-                if j==value:
-                    indegree[i]-=1
-                    if indegree[i]==0:
-                        q.append(i)
+            for i in graph[value]:
+                indegree[i]-=1
+                if indegree[i]==0:
+                    q.append(i)
         return visited==numCourses
