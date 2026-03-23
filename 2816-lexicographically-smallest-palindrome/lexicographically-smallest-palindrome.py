@@ -5,8 +5,10 @@ class Solution(object):
         :rtype: str
         """
         s=list(s)
-        length=len(s)
-        for i in range(length//2):
-            if s[i]!=s[length-i-1]:
-                s[i]=s[length-i-1]=min(s[i],s[length-i-1])
+        i,j=0,len(s)-1
+        while i<j:
+            if s[i]!=s[j]:
+                s[i]=s[j]=min(s[i],s[j])
+            i+=1
+            j-=1
         return "".join(s)
